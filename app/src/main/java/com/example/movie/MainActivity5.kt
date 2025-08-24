@@ -33,12 +33,12 @@ class MainActivity5 : AppCompatActivity() {
                     true
                 }
                 R.id.nav_saved -> {
-                   // val intent = Intent(this, MainActivity8::class.java)
+                   val intent = Intent(this, MainActivity8::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.nav_profile -> {
-                   // val intent = Intent(this, MainActivity9::class.java)
+                   val intent = Intent(this, MainActivity9::class.java)
                     startActivity(intent)
                     true
                 }
