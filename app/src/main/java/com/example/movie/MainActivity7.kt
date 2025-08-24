@@ -14,43 +14,30 @@ class MainActivity7 : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main7)
 
-        // Edge-to-edge padding
+        // Apply system bar padding
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // BottomNavigationView setup
+        // Bottom navigation
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-
-        // Set selected item for this activity
-        bottomNav.selectedItemId = R.id.nav_home
+        bottomNav.selectedItemId = R.id.nav_find
 
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_find -> {
-                    val intent = Intent(this, MainActivity5::class.java)
-                    startActivity(intent)
+                R.id.nav_home -> {
+                    startActivity(Intent(this, MainActivity5::class.java))
                     true
                 }
                 R.id.nav_feed -> {
-                    val intent = Intent(this, MainActivity6::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, MainActivity6::class.java))
                     true
                 }
-                R.id.nav_home -> {
-                    // Already in this activity
-                    true
-                }
-                R.id.nav_saved -> {
-                  val intent = Intent(this, MainActivity8::class.java)
-                    startActivity(intent)
-                    true
-                }
+                R.id.nav_find -> true // Already on Find
                 R.id.nav_profile -> {
-                   val intent = Intent(this, MainActivity9::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, MainActivity9::class.java))
                     true
                 }
                 else -> false

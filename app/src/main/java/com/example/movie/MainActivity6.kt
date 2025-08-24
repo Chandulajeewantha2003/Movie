@@ -2,6 +2,7 @@ package com.example.movie
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,49 +15,48 @@ class MainActivity6 : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main6)
 
-        // Apply padding for system bars (edge-to-edge)
+        // Apply system bar padding
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // BottomNavigationView setup
+        // Bottom navigation setup
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-
-        // Set selected item for current activity
         bottomNav.selectedItemId = R.id.nav_feed
-
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_find -> {
-
-                    val intent = Intent(this, MainActivity5::class.java)
-                    startActivity(intent)
-                    true
-
-                }
-                R.id.nav_feed -> {
-                    // Already in this activity
-                    true
-                }
                 R.id.nav_home -> {
-                     val intent = Intent(this, MainActivity7::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, MainActivity5::class.java))
                     true
                 }
-                R.id.nav_saved -> {
-                   val intent = Intent(this, MainActivity8::class.java)
-                    startActivity(intent)
+
+                R.id.nav_feed -> true
+                R.id.nav_find -> {
+                    startActivity(Intent(this, MainActivity7::class.java))
                     true
                 }
+
                 R.id.nav_profile -> {
-                   val intent = Intent(this, MainActivity9::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, MainActivity9::class.java))
                     true
                 }
+
                 else -> false
             }
+        }
+
+        // NEW: Buttons click listeners
+        val tvSeriesButton = findViewById<Button>(R.id.btnTvSeries)
+        val booksButton = findViewById<Button>(R.id.btnBooks)
+
+        tvSeriesButton.setOnClickListener {
+            startActivity(Intent(this, MainActivity8::class.java))
+        }
+
+        booksButton.setOnClickListener {
+            startActivity(Intent(this, MainActivity10::class.java))
         }
     }
 }
