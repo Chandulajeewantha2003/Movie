@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/main"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".MainActivity5">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-<!-- Scrollable Content -->
+    <!-- Scrollable Content -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EDFDED"
+        android:background="#181B18"
         android:fillViewport="true"
         android:padding="16dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -56,57 +56,9 @@ tools:context=".MainActivity5">
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-
                         android:contentDescription="Filter Icon" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-            <!-- Category Tabs -->
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fillViewport="true"
-                android:overScrollMode="never">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingVertical="8dp">
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:backgroundTint="@android:color/darker_gray"
-                        android:text="All"
-                        android:textColor="@android:color/white" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:backgroundTint="@color/secondaryColor"
-                        android:text="Movies"
-                        android:textColor="@android:color/white" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:backgroundTint="@color/secondaryColor"
-                        android:text="TV Series"
-                        android:textColor="@android:color/white" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/secondaryColor"
-                        android:text="Books"
-                        android:textColor="@android:color/white" />
-                </LinearLayout>
-            </HorizontalScrollView>
 
             <!-- Banner Image -->
             <ImageView
@@ -127,9 +79,7 @@ tools:context=".MainActivity5">
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!-- Genre Grid -->
-
-            <!-- Trending Movies Title -->
+            <!-- Horizontal Category Tabs -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="71dp"
@@ -155,7 +105,7 @@ tools:context=".MainActivity5">
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:backgroundTint="@android:color/black"
+                        android:backgroundTint="#E7FFC107"
                         android:text="Movies"
                         android:textColor="@android:color/white" />
 
@@ -163,7 +113,7 @@ tools:context=".MainActivity5">
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:backgroundTint="#FFC107"
+                        android:backgroundTint="#A2FFC107"
                         android:text="TV Series"
                         android:textColor="@android:color/white" />
 
@@ -176,6 +126,7 @@ tools:context=".MainActivity5">
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <!-- Trending Movies Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -184,7 +135,7 @@ tools:context=".MainActivity5">
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!-- Horizontal Scrollable Movie Posters -->
+            <!-- Scrollable Movie Posters -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -220,17 +171,17 @@ tools:context=".MainActivity5">
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-<!-- Bottom Navigation -->
-<com.google.android.material.bottomnavigation.BottomNavigationView
-    android:id="@+id/bottomNavigation"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:background="?android:attr/windowBackground"
-    android:elevation="8dp"
-    app:menu="@menu/bottom_nav_menu"
-    app:labelVisibilityMode="labeled"
-    app:itemIconTint="@color/black"
-    app:itemTextColor="@color/black" />
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        android:elevation="8dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

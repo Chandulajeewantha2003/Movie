@@ -7,6 +7,7 @@
     <color name="primaryColor">#060137</color>
     <color name="secondaryColor">#18181B</color>
     <color name="otherColor">#2196F3</color>
+    <color name="nav_icon_color" />
 
 
 </resources>

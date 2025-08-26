@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#EEEBFF"
+            android:background="#0D0D24"
             android:orientation="vertical"
             android:padding="12dp">
 
@@ -30,7 +30,7 @@
                 android:layout_height="48dp"
                 android:layout_marginBottom="12dp"
 
-                android:backgroundTint="@android:color/darker_gray"
+                android:backgroundTint="#D9C4C4"
                 android:drawableStart="@android:drawable/ic_menu_search"
                 android:hint="Search"
                 android:paddingStart="12dp"
@@ -47,7 +47,7 @@
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/black"
+                    android:backgroundTint="#4E4C4C"
                     android:text="Movies"
                     android:textColor="@android:color/white" />
 
@@ -55,8 +55,8 @@
                     android:id="@+id/btnTvSeries"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#EDFDED"
+                    android:layout_height="match_parent"
+                    android:background="#599559"
                     android:text="TV Series" />
 
                 <Button
@@ -64,7 +64,8 @@
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Books" />
+                    android:text="Books"
+                    android:textColorLink="#1F714F" />
             </LinearLayout>
             <!-- Row 1 -->
             <LinearLayout

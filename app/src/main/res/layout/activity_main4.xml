@@ -5,8 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5EFE7"
     tools:context=".MainActivity4">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Top Right Puzzle Image -->
     <ImageView
@@ -19,6 +31,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Title -->
+
+    <!-- Options List -->
     <TextView
         android:id="@+id/titleText"
         android:layout_width="0dp"
@@ -26,15 +40,16 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/emblema_one"
         android:gravity="center"
+        android:rotationY="-4"
         android:text="What are you\nlooking for today?"
-        android:textColor="@android:color/black"
+        android:textColor="#121738"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/puzzleImage" />
 
-    <!-- Options List -->
     <LinearLayout
         android:id="@+id/optionsLayout"
         android:layout_width="0dp"
@@ -46,14 +61,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleText">
 
-        <!-- Reusable Option Layout -->
+        <!-- Option: Movies -->
         <LinearLayout
             android:id="@+id/optionMovies"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/rounded_card"
-            android:backgroundTint="#BEE0E4"
+            android:backgroundTint="#61666B"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="12dp">
@@ -69,7 +84,7 @@
                 android:layout_weight="1"
                 android:paddingStart="12dp"
                 android:text="Movies"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <ImageView
@@ -78,13 +93,14 @@
                 android:src="@drawable/ic_arrow_right" />
         </LinearLayout>
 
+        <!-- Option: TV Shows -->
         <LinearLayout
             android:id="@+id/optionTv"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/rounded_card"
-            android:backgroundTint="#BEE0E4"
+            android:backgroundTint="#60656A"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="12dp">
@@ -100,7 +116,7 @@
                 android:layout_weight="1"
                 android:paddingStart="12dp"
                 android:text="TV Shows"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <ImageView
@@ -109,13 +125,14 @@
                 android:src="@drawable/ic_arrow_right" />
         </LinearLayout>
 
+        <!-- Option: Books -->
         <LinearLayout
             android:id="@+id/optionBooks"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/rounded_card"
-            android:backgroundTint="#BEE0E4"
+            android:backgroundTint="#676C71"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="12dp">
@@ -131,7 +148,7 @@
                 android:layout_weight="1"
                 android:paddingStart="12dp"
                 android:text="Books"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <ImageView
@@ -140,13 +157,14 @@
                 android:src="@drawable/ic_arrow_right" />
         </LinearLayout>
 
+        <!-- Option: Podcasts -->
         <LinearLayout
             android:id="@+id/optionPodcasts"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/rounded_card"
-            android:backgroundTint="#BEE0E4"
+            android:backgroundTint="#686E73"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="12dp">
@@ -162,7 +180,7 @@
                 android:layout_weight="1"
                 android:paddingStart="12dp"
                 android:text="Podcasts"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <ImageView
@@ -171,12 +189,13 @@
                 android:src="@drawable/ic_arrow_right" />
         </LinearLayout>
 
+        <!-- Option: Food and Drinks -->
         <LinearLayout
             android:id="@+id/optionFood"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/rounded_card"
-            android:backgroundTint="#BEE0E4"
+            android:backgroundTint="#666B71"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="12dp">
@@ -192,7 +211,7 @@
                 android:layout_weight="1"
                 android:paddingStart="12dp"
                 android:text="Food and Drinks"
-                android:textColor="@android:color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <ImageView
@@ -200,34 +219,22 @@
                 android:layout_height="24dp"
                 android:src="@drawable/ic_arrow_right" />
         </LinearLayout>
-
     </LinearLayout>
 
-    <!-- Skip Text -->
+    <!-- Decorative Image -->
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="117dp"
-        android:layout_height="92dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894"
-        app:srcCompat="@drawable/_dicons" />
+    <!-- Next Button -->
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/otherColor"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#020202"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/optionsLayout"
-        app:layout_constraintHorizontal_bias="0.869"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintEnd_toEndOf="@+id/optionsLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#EEEBFF"
+            android:background="#15151D"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -28,16 +28,18 @@
                 android:id="@+id/greeting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hi, Riju 👋"
+                android:text="Hi, Malith"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="12dp"
                 android:text="Experience the Eternity"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textColor="@android:color/white"/>
 
             <!-- Search bar -->
 
@@ -117,7 +119,8 @@
                 android:paddingBottom="8dp"
                 android:text="Popular Movies"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
 
             <!-- Movie cards container -->
             <LinearLayout
@@ -141,7 +144,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/john_wick" />
+                            android:src="@drawable/a" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -149,7 +152,7 @@
                             android:layout_alignParentBottom="true"
                             android:background="#AA000000"
                             android:padding="6dp"
-                            android:text="John Wick 2"
+                            android:text="Godzilla"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -172,7 +175,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/john_wick" />
+                            android:src="@drawable/d" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -180,7 +183,7 @@
                             android:layout_alignParentBottom="true"
                             android:background="#AA000000"
                             android:padding="6dp"
-                            android:text="John Wick 3"
+                            android:text="ACP"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -203,7 +206,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/john_wick" />
+                            android:src="@drawable/e" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -211,7 +214,7 @@
                             android:layout_alignParentBottom="true"
                             android:background="#AA000000"
                             android:padding="6dp"
-                            android:text="John Wick 3"
+                            android:text="Gun One"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -234,7 +237,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/john_wick" />
+                            android:src="@drawable/b" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -242,7 +245,7 @@
                             android:layout_alignParentBottom="true"
                             android:background="#AA000000"
                             android:padding="6dp"
-                            android:text="John Wick 3"
+                            android:text="War 2"
                             android:textColor="@android:color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />

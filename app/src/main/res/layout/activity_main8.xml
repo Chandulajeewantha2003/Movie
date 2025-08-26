@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDFDED"
+    android:background="#0D0D28"
     tools:context=".MainActivity8">
 
     <!-- Scrollable Grid -->
@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#EEEBFF"
+            android:background="#12101A"
             android:orientation="vertical"
             android:padding="12dp">
 
@@ -29,7 +29,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="12dp"
-
                 android:backgroundTint="@android:color/darker_gray"
                 android:drawableStart="@android:drawable/ic_menu_search"
                 android:hint="Search"
@@ -48,7 +47,6 @@
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:background="#EDFDED"
                     android:text="Movies" />
 
@@ -67,6 +65,7 @@
                     android:layout_height="wrap_content"
                     android:text="Books" />
             </LinearLayout>
+
             <!-- Row 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -95,7 +94,8 @@
                         android:gravity="center"
                         android:paddingTop="4dp"
                         android:text="John Wick 2"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"/>
                 </LinearLayout>
 
                 <!-- Movie 2 -->
@@ -110,44 +110,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/interstellar" />
+                        android:src="@drawable/g" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:paddingTop="4dp"
-                        android:text="Interstellar"
-                        android:textSize="14sp" />
+                        android:text="ACM"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"/>
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Row 2 -->
+
+
+            <!-- Row 3 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:orientation="horizontal"
-                android:weightSum="2">
-
-                <!-- Movie 3 -->
-
-
-                <!-- Movie 4 -->
-
-            </LinearLayout>
-
-            <!-- Keep adding more rows (2 movies per row) -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-
-            </LinearLayout>
+                android:weightSum="2"></LinearLayout>
 
             <!-- Row 4 -->
             <LinearLayout
@@ -157,7 +141,53 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
+                <!-- Movie 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/v" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="4dp"
+                        android:text="Macwell"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+
+                <!-- Movie 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/h" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="4dp"
+                        android:text="Passing"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
